@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: sans-serif;
+    font-size: large;
+}
+section{
+    overflow: hidden;
+    height: 100%;
+    padding-bottom: 31px;
+}
+
+.second-block{
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+}
+header{
+    text-decoration: none;
+    font-size: 100px;
+    font-weight: 200;
+    position: absolute;
+    color: white;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+    margin: 100px 0 0 0;
+}
+.menu{
+    height: 100%;
+    width: 50px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    position: fixed;
+    padding-left: 15px;
+    background-color: black;
+    transition: 0.3s;
+    align-items: center;
+
+}
+
+.three-bars{
+    margin-top: 650%;
+    display: block;
+}
+.bar{
+    margin-top: 5px;
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    transition: 0.3s ease;
+}
+.first .second .third{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    transition: 0.3s ease;
+}
+.change .first{
+    -webkit-transform: rotate(-45deg) translate(-9px,6px);
+    transform: rotate(-45deg) translate(-9px,6px);
+}
+.change .second{
+    opacity: 0;
+}
+.change .third{
+    -webkit-transform: rotate(45deg) translate(-8px,-6px);
+    transform: rotate(45deg) translate(-8px,-6px);
+}
+
+.main1{
+    display: flex;
+    margin-left: 29%;
+ }
+.main2{
+    display: flex;
+    margin-left: 29%;
+}
+.nav{
+    height: 100%;
+    width: 50px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    position: fixed;
+    padding-left: 15px;
+    background-color: black;
+    transition: 0.3s ease;
+    align-items: center;
+    opacity: 0;
+}
+.nav.clickOnX{
+    opacity: 1;
+    height: 100%;
+    width: 400px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;  
+    transition: 0.5s ease;
+}
+ul{
+    list-style: none;
+    margin-top: 250px;
+    text-align: left;
+}
+.nav ul a{
+    margin: 15px 0 0 25px;
+    font-size: larger;
+    display: block;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.temp{
+    transform: rotate(35deg);
+    width: 150px;
+    height: 300px;
+    font-size: larger;
+    margin-right: 60px;
+    margin-top: 10%;
+    padding: 0px;
+    color: white;
+    border-radius: 8px;
+    border: 5px solid white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.7);
+    transition: background-color 0.5s,transform 0.5s;
+}
+
+.temp.onScrollChange{
+    transform: rotateY(50px);
+    background-color: red;
+}
+.pic{
+    width: inherit;
+    height: 150px;
+    background: url(bg2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.temp1{
+    margin-top: -10%;
+    margin-right: 0;
+}
+.temp2{
+    width: 400px;
+    height: 300px;
+}
+.temp3{
+    width: 500px;
+    height: 500px;
+    margin: -150px -400px 0 100px;
+}
+.text-area{
+    padding: 5px;
+    display: block;
+    align-items: center;
+}
+strong{
+    text-align: center;
+}
+.text{
+    padding: 15px;
+}
