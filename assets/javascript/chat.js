@@ -1,5 +1,5 @@
 
-
+const auth = firebase.auth();
 function log(){
 
 const email1 = document.querySelector("#inputEmail").value;
@@ -19,10 +19,9 @@ alert(email1+" this is email");
     else
     {
 
-        firebase.auth().createUserWithEmailAndPassword(email1.trim(),password)
+        auth.createUserWithEmailAndPassword(email1.trim(),password)
     .catch(function(error){
         alert(error.message);
-
     })
     authenticated();
     }
@@ -30,10 +29,10 @@ alert(email1+" this is email");
 }
 
 function fun1(){
-    window.open("DSA.html","_top");
+    window.open("dashboard.html","_top");
 }
 function authenticated(){
-    firebase.auth().onAuthStateChanged((firebaseUser)=>
+    auth.onAuthStateChanged((firebaseUser)=>
     {
         if(firebaseUser)
         fun1();
