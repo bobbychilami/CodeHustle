@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/chatGroup.css">
+    <title>Discuss</title>
+</head>
+<body>
+    
+    <nav class="nav" id="nav-bar">
+        <ul>
+            <li class="aTag"><a href="dashboard.html" target="_blank">Home</a><div class="line"></div></li>
+            <li class="aTag"><a href="DSA.html" target="_blank">Practice</a><div class="line"></div></li>
+            <li class="aTag"><a href="#">Tutorials</a><div class="line"></div></li>
+            <li class="aTag"><a href="#">Quizes</a><div class="line"></div></li>
+            <li class="aTag"><a href="chat.html">Discuss</a><div class="line"></div></li>
+        </ul>
+    </nav>
+    <div class="menu">
+        <img src="assets/css/835023bb3b7828de926f154d5aa8fceb.png" alt="bg">
+        <div class="three-bars" id="three-bars" onclick="makeItX(this); CallForMenuBar(); linesAnimation();">
+            <div class="first bar"></div>
+            <div class="second bar"></div>
+            <div class="third bar"></div>
+        </div>
+        <div ><a href="#">Login</a></div>
+    </div>
+
+
+    <header>Chat Group</header>
+    <div class="main-block">
+        <div class="no-of-participants">   5 users online</div>
+
+        <div class="all-messages">
+            <ul id="group-message">
+                <li><h4>Hii</h4></li>
+                <li><h4>Whats Up</h4></li>
+                <li><h4>Whats Up</h4></li>
+                <li><h4>Whats Up</h4></li>
+                <li><h4>Whats Up</h4></li>
+                <li><h4>Nothing</h4></li>
+                <li><h4>Nothing</h4></li>
+                <li><h4>Nothing</h4></li>
+
+                <li><h4>Nothing</h4></li>
+
+                <li><h4>Nothing</h4></li>
+                <li><h4>Nothing</h4></li>
+                <li><h4>Nothing</h4></li>
+                <li><h4>Nothing</h4></li>
+
+            </ul>
+            <ul id="my-message">
+                <li><h4>Hello</h4></li>
+                <li><h4>Nothing</h4></li>
+                <li><h4>Nothing</h4></li>
+                <li><h4>Nothing</h4></li>
+                <li><h4>Nothing</h4></li>
+                <li><h4>Nothing</h4></li>
+                <li><h4>Nothing</h4></li>
+                <li><h4>Nothing</h4></li>
+                <li><h4>Nothing</h4></li>
+                <li><h4>Nothing</h4></li>
+            </ul>
+        </div>
+
+        <div class="message-block">
+            <input type="text" id="message" placeholder="   Enter your Message" >
+            <button id="send">Send</button>
+        </div>
+    </div>
+
+    <script src="assets/javascript/dashBoardjavaScript.js"></script>
+    <script src="assets/javascript/chatGroup.js"></script>
+</body>
+</html>

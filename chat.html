@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Discuss</title>
+    <link rel="stylesheet" href="assets/css/chat.css">
+    
+</head>
+<body>
+    
+    <nav class="nav" id="nav-bar">
+        <ul>
+            <li class="aTag"><a href="dashboard.html" target="_blank">Home</a><div class="line"></div></li>
+            <li class="aTag"><a href="DSA.html" target="_blank">Practice</a><div class="line"></div></li>
+            <li class="aTag"><a href="#">Tutorials</a><div class="line"></div></li>
+            <li class="aTag"><a href="#">Quizes</a><div class="line"></div></li>
+            <li class="aTag"><a href="chat.html">Discuss</a><div class="line"></div></li>
+        </ul>
+    </nav>
+    <div class="menu">
+        <img src="assets/css/835023bb3b7828de926f154d5aa8fceb.png" alt="bg">
+        <div class="three-bars" id="three-bars" onclick="makeItX(this); CallForMenuBar(); linesAnimation();">
+            <div class="first bar"></div>
+            <div class="second bar"></div>
+            <div class="third bar"></div>
+        </div>
+        <div ><a href="#">Login</a></div>
+    </div>
+
+    <div class="block">
+        <button>Sign Up</button>
+        <br>
+        <h5 class="email">Email</h5>
+        <input type="email" id="inputEmail" autocomplete="email">
+        <h5 class="rem">Re-Enter Email</h5>
+        <input type="email" id="reemail">
+        <h5 class="password">Password</h5>
+        <input type="password" id="inputPass">
+        <button onclick="log()" id="login">Sign In</button>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDHd6nUJB3NOjuJlw8zBtksdasfVkAEYFM",
+    authDomain: "chatapp-practice7.firebaseapp.com",
+    projectId: "chatapp-practice7",
+    storageBucket: "chatapp-practice7.appspot.com",
+    messagingSenderId: "110719916386",
+    appId: "1:110719916386:web:8a3bf55b843b4a8a0a343b"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<script src="assets/javascript/chat.js"></script>
+<script src="assets/javascript/dashBoardjavaScript.js"></script>
+
+
+</body>
+
+</html>
