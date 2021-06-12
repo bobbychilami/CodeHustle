@@ -16,4 +16,4 @@ We will be creating our mini project in this Repository.
 
 
 
-Users: Bobby Chilami, Janhavi Kokare, Jyoti Rokade, Dhanashree Shinde
+Users: Bobby Chilami, Janhavi Kokare, Jyoti Rokade.
