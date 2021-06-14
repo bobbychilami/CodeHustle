@@ -34,47 +34,23 @@
     <div class="header-chatGroup">Discussion</div>
     <div class="main-block">
         <div class="no-of-participants">   5 users online</div>
+        <div id="messages">
 
-        <div class="all-messages">
-            <ul id="group-message">
-                <li><h4>Hii</h4></li>
-                <li><h4>Whats Up</h4></li>
-                <li><h4>Whats Up</h4></li>
-                <li><h4>Whats Up</h4></li>
-                <li><h4>Whats Up</h4></li>
-                <li><h4>Nothing</h4></li>
-                <li><h4>Nothing</h4></li>
-                <li><h4>Nothing</h4></li>
-
-                <li><h4>Nothing</h4></li>
-
-                <li><h4>Nothing</h4></li>
-                <li><h4>Nothing</h4></li>
-                <li><h4>Nothing</h4></li>
-                <li><h4>Nothing</h4></li>
-
-            </ul>
-            <ul id="my-message">
-                <li><h4>Hello</h4></li>
-                <li><h4>Nothing</h4></li>
-                <li><h4>Nothing</h4></li>
-                <li><h4>Nothing</h4></li>
-                <li><h4>Nothing</h4></li>
-                <li><h4>Nothing</h4></li>
-                <li><h4>Nothing</h4></li>
-                <li><h4>Nothing</h4></li>
-                <li><h4>Nothing</h4></li>
-                <li><h4>Nothing</h4></li>
-            </ul>
         </div>
-
-        <div class="message-block">
-            <input type="text" id="message" placeholder="   Enter your Message" >
+        <form onsubmit="return sendMessage();" class="message-block">
+            <input type="text" id="message1" placeholder="   Enter your Message" >
             <button id="send">Send</button>
-        </div>
+        </form>
     </div>
 
-    <script src="assets/javascript/dashBoardjavaScript.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+
     <script src="assets/javascript/chatGroup.js"></script>
+    <script src="assets/javascript/dashBoardjavaScript.js"></script>
+    
 </body>
 </html>

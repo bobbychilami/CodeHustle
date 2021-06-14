@@ -1,11 +1,27 @@
 
+
+
+
+var firebaseConfig = {
+    apiKey: "AIzaSyDHd6nUJB3NOjuJlw8zBtksdasfVkAEYFM",
+    authDomain: "chatapp-practice7.firebaseapp.com",
+    projectId: "chatapp-practice7",
+    storageBucket: "chatapp-practice7.appspot.com",
+    messagingSenderId: "110719916386",
+    appId: "1:110719916386:web:8a3bf55b843b4a8a0a343b"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
+
+
 function log(){
 
+var name = document.querySelector("#inputName").value;
 const email1 = document.querySelector("#inputEmail").value;
 const reemail = document.querySelector("#reemail").value;
 const password = document.querySelector("#inputPass").value;
-alert(email1+" this is email");
+
 
     if(email1.trim()==""){
         alert("Enter Email");
@@ -16,20 +32,38 @@ alert(email1+" this is email");
     {
         alert("Email do not match");
     }
-    else
+    else if(checkAlreadyUser())
+    {
+        alert("Email already registered");
+    }
+    else 
     {
 
-        auth.createUserWithEmailAndPassword(email1.trim(),password)
-    .catch(function(error){
-        alert(error.message);
-    })
-    authenticated();
+            auth.createUserWithEmailAndPassword(email1.trim(),password)
+        .catch(function(error){
+            alert(error.message);
+        });
+
+        firebase.database().ref("data").push().set({
+            "name" : name,
+            "email" : email1,
+            "password" : password
+        });
+        alert(email1+" email" + name +" name "+ password);
+        authenticated();
     }
     
 }
 
+function checkAlreadyUser(){
+    auth.fetchSignInMethodsForEmail(email1).then( (x)=>{
+        return true;
+    })
+    return false;
+}
+
 function fun1(){
-    window.open("dashboard.html","_top");
+    window.open("chatGroup.html","_top");
 }
 function authenticated(){
     auth.onAuthStateChanged((firebaseUser)=>
@@ -39,3 +73,4 @@ function authenticated(){
     }
     )
 }
+

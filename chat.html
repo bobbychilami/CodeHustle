@@ -32,12 +32,14 @@
     <div class="block">
         <button>Sign Up</button>
         <br>
+        <h5 class="name">Name</h5>
+            <input type="text"  id="inputName">
         <h5 class="email">Email</h5>
-        <input type="email" id="inputEmail" autocomplete="email">
+            <input type="email" id="inputEmail" autocomplete="email">
         <h5 class="rem">Re-Enter Email</h5>
-        <input type="email" id="reemail">
+            <input type="email" id="reemail">
         <h5 class="password">Password</h5>
-        <input type="password" id="inputPass">
+            <input type="password" id="inputPass">
         <button onclick="log()" id="login">Sign In</button>
     </div>
 
@@ -51,20 +53,8 @@
 <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
 
 
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyDHd6nUJB3NOjuJlw8zBtksdasfVkAEYFM",
-    authDomain: "chatapp-practice7.firebaseapp.com",
-    projectId: "chatapp-practice7",
-    storageBucket: "chatapp-practice7.appspot.com",
-    messagingSenderId: "110719916386",
-    appId: "1:110719916386:web:8a3bf55b843b4a8a0a343b"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
 
 <script src="assets/javascript/chat.js"></script>
 <script src="assets/javascript/dashBoardjavaScript.js"></script>
