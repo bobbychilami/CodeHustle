@@ -10,17 +10,17 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-
+  var nameOfSender;
 function sendMessage(){
     firebase.database()
     .ref("data/"+firebase.auth().currentUser.uid)
     .once('value')
     .then(snapshot =>{
-        var nameOfSender = snapshot.val().name;
+        nameOfSender = snapshot.val().name;
     })
     alert(nameOfSender);
     var message = document.querySelector("#message1").value;
-    alert("message1 : " + nameOfSender);
+    alert("message1 : " + message);
     firebase.database().ref("messages").push().set({
     "sender" : nameOfSender.trim(),
     "message" : message.trim()
@@ -29,14 +29,16 @@ alert("Name : " + nameOfSender);
 return false;
 }
 
-firebase.database().ref("messages").on("child_added", function (snapshot){
+
+
+firebase.database().ref("messages/").on("child_added", function (snapshot){
     var html = "";
     html += "<li>";
-    // if(snapshot.val().sender == nameOfSender){
-    //     html += "<button id='" + snapshot.key + "' onclick = 'deleteMessage(this);'>";
-    //     html += "X";
-    //     html += "</button>";
-    // }
+    if(snapshot.val().sender == nameOfSender){
+        html += "<button id='" + snapshot.key + "' onclick = 'deleteMessage(this);'>";
+        html += "X";
+        html += "</button>";
+    }
 
     html += snapshot.val().sender + ": " +snapshot.val().message;
     html += "</li>";
@@ -49,7 +51,28 @@ function deleteMessage(self){
     var messageId = self.getAttribute("data-id");
 
     firebase.database().ref("messages").child(messageId).remove();
+
 }
+
 firebase.database().ref("messages").on("child_removed",function (snapshot){
-    document.getElementById("message-"+ snapshot.key).innerHTML = "This message has been removed";
+    document.getElementById("message-"+ snapshot.key).innerText = "This message has been removed";
 })
+
+
+
+var names,text_message;
+function getMessages(){
+    firebase.database()
+    .ref("messages/")
+    .once('value')
+    .then(snapshot =>{
+        snapshot.forEach(function(snapshot1){
+            names = snapshot1.val().sender;
+            text_message = snapshot1.val().message;
+            console.log(names+" : "+text_message);
+            document.querySelector("#group-message").innerHTML +="<li>"+names+" : "+text_message+" </li>";
+
+        })
+    })
+
+}

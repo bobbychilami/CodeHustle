@@ -36,7 +36,16 @@ body{
     background-color: darkgray;
     padding: 10px 90vw 10px 10px;
     left: 5;
+    margin: -50px 0 0 0;
     position: fixed;
+}
+#group-message li{
+    margin-top: 100px;
+    color: black;
+    width: 10%;
+    background-color: white;
+    padding: 5px 10px 5px 10px;
+    
 }
 .message-block{
     bottom: 0;

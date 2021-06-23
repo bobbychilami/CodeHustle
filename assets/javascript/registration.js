@@ -15,13 +15,16 @@ var firebaseConfig = {
 const auth = firebase.auth();
 
 
-function log(){
+function register(){
 
-const name = document.querySelector("#inputName").value;
+
+
+const firstname = document.querySelector("#firstname").value;
+const lastname = document.querySelector("#lastname").value;
+const phone = document.querySelector("#number").value;
 const email1 = document.querySelector("#inputEmail").value;
 const reemail = document.querySelector("#reemail").value;
 const password = document.querySelector("#inputPass").value;
-
 
     if(email1.trim()==""){
         alert("Enter Email");
@@ -32,24 +35,26 @@ const password = document.querySelector("#inputPass").value;
     {
         alert("Email do not match");
     }
-
     else 
     {
 
-            auth.createUserWithEmailAndPassword(email1.trim(),password)
+            auth.createUserWithEmailAndPassword(email1,password)
         .catch(function(error){
             alert(error.message);
         });
 
         firebase.database().ref("data").push().set({
-            "name" : name,
+            "firstname" : firstname,
+            "lastname" : lastname,
+            "phone" : phone,
             "email" : email1,
             "password" : password
         });
-        alert(email1+" email" + name +" name "+ password);
+        alert(email1+" email" + firstname +" name "+ password);
         authenticated();
     }
     
+alert(email1);
 }
 
 function checkAlreadyUser(){

@@ -1,0 +1,20 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+
+}
+.header-block{
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+}
+.sub-Header{
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+}
+ 
