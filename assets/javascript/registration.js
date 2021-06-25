@@ -14,22 +14,21 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
+var uidOfUser = 0;
 
 function register(){
 
 
-
-const firstname = document.querySelector("#firstname").value;
-const lastname = document.querySelector("#lastname").value;
-const phone = document.querySelector("#number").value;
+    
+const name1 = document.querySelector("#full-name").value;
 const email1 = document.querySelector("#inputEmail").value;
 const reemail = document.querySelector("#reemail").value;
-const password = document.querySelector("#inputPass").value;
+const password1 = document.querySelector("#inputPass").value;
 
     if(email1.trim()==""){
         alert("Enter Email");
     }
-    else if(password.trim().length<7)
+    else if(password1.trim().length<7)
     alert("Enter Password more than 7 characters");
     else if(email1!=reemail)
     {
@@ -38,23 +37,40 @@ const password = document.querySelector("#inputPass").value;
     else 
     {
 
-            auth.createUserWithEmailAndPassword(email1,password)
-        .catch(function(error){
+        try{
+            auth.createUserWithEmailAndPassword(email1,password1)
+            .then(function(userAuth){
+                uidOfUser = userAuth.user.uid;
+                var user1 = {
+                    name : name1,
+                    email : email1,
+                    password : password1,
+                    uid : userAuth.user.uid
+                }
+                
+                writeUserData(user1);
+                authenticated();
+            });
+            
+        }
+        catch(error){
             alert(error.message);
-        });
-
-        firebase.database().ref("data").push().set({
-            "firstname" : firstname,
-            "lastname" : lastname,
-            "phone" : phone,
-            "email" : email1,
-            "password" : password
-        });
-        alert(email1+" email" + firstname +" name "+ password);
-        authenticated();
+        }
+        
+        
+        
     }
     
-alert(email1);
+}
+
+
+
+
+
+function writeUserData(user1){
+    firebase.database().ref("data/"+user1.uid).set(user1).catch(error =>{
+        console.log(error.message + " database errroorrr");
+    });
 }
 
 function checkAlreadyUser(){

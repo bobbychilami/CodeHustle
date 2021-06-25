@@ -5,7 +5,7 @@ var lines = document.querySelectorAll(".line");
 
 var main1 = document.getElementById('main1');
 
-let header = document.getElementById('header-area');
+let header = document.getElementById("header-area");
 
 var flag = false;
 function makeItX(x){
@@ -53,7 +53,6 @@ function linesAnimation(){
   }
 }
 
-var fourtFlag = false;
 function loadOnScreen(){
   if(!thirdFlag){
     for(var j=0;j<main.length;j++){
@@ -69,23 +68,3 @@ function loadOnScreen(){
     thirdFlag = false;
   }
 }
-
-window.addEventListener('scroll',function(){
-  var value = window.scrollY;
-    // header.style.backgroundImage ='linear-gradient(to right,rgba(' + 225-value +','+ 225-value +','+ 225-value +','+ 1 +'),rgba';
-    header.style.left = value +'px';
-    if(value < 500){
-    
-      for(var j=0;j<main.length;j++){
-        main[j].classList.add('onScrollChange');
-        main[j].style.top = value + 0.25 + 'px';
-        main[j].style.right = value + 1.5 + 'px';
-      }
-    }
-    else
-    {
-      for(var j=0;j<main.length;j++){
-        main[j].classList.remove('onScrollChange');
-      }
-    }
-});

@@ -46,7 +46,7 @@ const password = document.querySelector("#inputPass").value;
             "email" : email1,
             "password" : password
         });
-        alert(email1+" email" + name +" name "+ password);
+        alert(email1+" email " + name +" name "+ password);
         authenticated();
     }
     
