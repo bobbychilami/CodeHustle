@@ -51,7 +51,7 @@ form{
 
 }
 
-.username{
+#email{
     position:relative;
     left:200px;
     top:-37px;
@@ -81,7 +81,7 @@ form{
     font-weight: 700;
 }
 
-.password{
+#password{
     position:relative;
     left:200px;
     top:-37px;

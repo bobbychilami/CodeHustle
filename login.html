@@ -36,18 +36,16 @@
         </div>
 
         <div class="block-main">
-            <form action="">
 
                 <div id="name">
-                    <h2 class="un">user name</h2>
-                    <input class="username" type="text" ><br>
-                    <label class="userlabel">user name</label>
+                    <h2 class="un">Email</h2>
+                    <input type="email" id="emailAddress"><br>
                     <br>
                     <br>
-
+                    <h2>Re Enter Email</h2>
+                    <input type="email" id="reemailAddress">
                     <h3 class="pswd">Password</h3>
-                    <input class="password" type="password" ><br>
-                    <label class="passwordlabel">password</label>
+                    <input type="password" id="passwordText"><br>
                      <br>
                      <br>
                     <!--<h3 class="cpswd">Confirm Password</h3>
@@ -55,11 +53,10 @@
                     <label class="cpasswordlabel">confirm passwordr</label>-->
                
                     <div class="buttons">
-                        <button type="submit" onclick=""> Login</button>
-                    <a href="./reg1.html" id="register"><button>Register</button></a>
+                        <button onclick="loginFunction()"> Login</button>
+                    <a href="./reg1.html" target="_blank"><button>Register</button></a>
                     </div>
                 </div>
-            </form>
         </div>
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
 
@@ -68,8 +65,10 @@
 
 <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
 
+<script src="assets/javascript/firebase.js"></script>
 
-<script src="assets/javascript/chat.js"></script>
+<script src="assets/javascript/login.js"></script>
+
 <script src="assets/javascript/dashBoardjavaScript.js"></script>
 </body>
 

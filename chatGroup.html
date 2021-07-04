@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/dashboardStyle1.css">
     <title>Discuss</title>
 </head>
-<body onload = getMessages()>
+<body onload="childAdded();">
     
     <nav class="nav" id="nav-bar">
         <ul>
@@ -38,10 +38,10 @@
             
             <!-- Messages -->
         </ul>
-        <form  class="message-block">
+        <div  class="message-block">
             <input type="text" id="message1" placeholder="   Enter your Message" >
             <button id="send" onclick="sendMessage();">Send</button>
-        </form>
+        </div>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
@@ -49,6 +49,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+
+    <script src="assets/javascript/firebase.js"></script>
 
     <script src="assets/javascript/chatGroup.js"></script>
 

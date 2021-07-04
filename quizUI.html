@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/dashboardStyle1.css">
+    <link rel="stylesheet" href="assets/css/quizCSS.css">
+</head>
+<body>
+    
+<nav class="nav" id="nav-bar">
+    <ul>
+        <li class="aTag"><a href="dashboard.html" target="_blank">Home</a><div class="line"></div></li>
+        <li class="aTag"><a href="DSA.html" target="_blank">Practice</a><div class="line"></div></li>
+        <li class="aTag"><a href="#">Tutorials</a><div class="line"></div></li>
+        <li class="aTag"><a href="#">Quizes</a><div class="line"></div></li>
+        <li class="aTag"><a href="chatGroup.html">Discuss</a><div class="line"></div></li>
+    </ul>
+</nav>
+<div class="menu">
+    <a href="dashboard.html"><img src="assets/images/CHlogoWhite.png" alt="bg" class="logo" ></a>
+    <div class="three-bars" id="three-bars" onclick="makeItX(this); CallForMenuBar(); linesAnimation();">
+        <div class="first bar"></div>
+        <div class="second bar"></div>
+        <div class="third bar"></div>
+    </div>
+    <div class="login"><a href="#">Login</a></div>
+</div>
+
+<div class="bg-image"></div>
+    <div class="main-body-flex">
+
+        <div class="left-block-flex">
+            
+        </div>
+
+        <div class="right-block-flex">
+            <h1>Create A Quiz</h1>
+
+            <div class="options-body">
+                <h5>Start Creating your Quiz</h5>
+                <div class="title-block">
+                    <input type="text" id="Title-of-quiz" placeholder="Name of quiz">
+                    <h2 id="name-of-quiz"></h2>
+                    <button onclick="getTitle()" id="title-button">Create</button>
+                </div>
+                <h5 class="no-of-questions">Click the + button to add questions</h5>
+                <button onclick="addQuestion()" class="add-question-button">+</button>
+            </div>
+
+            <div id="all-questions">
+                
+            </div>
+
+        </div>
+    </div>
+    <script src="assets/javascript/quizJS.js"></script>
+    <script src="assets/javascript/dashBoardjavaScript.js"></script>    
+</body>
+</html>
