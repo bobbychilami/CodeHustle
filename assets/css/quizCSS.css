@@ -38,7 +38,16 @@ body{
     /* border-radius: 5px; */
     box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
 }
-
+.preview{
+    margin-top: 20px;
+    /* font-size: larger; */
+    text-align: center;
+}
+#pre-title{
+    margin-top: 20px;
+    /* font-size: larger; */
+    text-align: center;
+}
 .right-block-flex{
     justify-content: center;
     display: block;
@@ -94,7 +103,7 @@ body{
     border: solid white 2px;
 
 }
-#title-button{
+button{
     background-color: rgba(0,0,0,0.5);
     color: white;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
@@ -143,7 +152,6 @@ body{
 }
 .options-field{
     padding: 20px;
-    background-color: rgba(255, 21, 21, 0.945);
 }
 #all-questions ul li
 {

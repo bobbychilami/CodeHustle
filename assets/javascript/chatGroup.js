@@ -64,14 +64,3 @@ function deleteMessage(self){
 
 
 
-// var names,text_message;
-// function getMessages(){
-//     
-
-// }
-
-// function addMessage(){
-//     var childMessage = document.createElement("li");
-//     childMessage.innerHTML = nameOfSender + " : " + message;
-//     document.querySelector("#group-message").appendChild(childMessage);
-// }
