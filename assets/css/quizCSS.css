@@ -13,7 +13,8 @@ body{
     position: relative;
 }
 .bg-image{
-    background: url(../images/pic4.jpg);
+    /* background: url(../images/pic4.jpg); */
+    background-color: black;
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -29,22 +30,79 @@ body{
     background-color: rgba(0,0,0,0.5);
 }
 .left-block-flex{
-    width: 50vw;
+    width: 45vw;
     background-color: rgba(255, 255,255,0.2);
     z-index: 2;
     /* background: linear-gradient(to bottom,rgba(0,0, 0, 0.9),rgba(255, 255,255,0.2)); */
 
-    /* border: 5px solid white; */
+    border: 3px solid rgba(255, 255, 255, 0.726);
     /* border-radius: 5px; */
     box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+
+}
+input{
+    padding: 5px 10px 5px 10px;
+
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 5px;
+    width: 10vw;
+    height: 15px;
+    border: solid white 2px;
+}
+.left-block-flex h5{
+    padding: 10px;
+}
+.left-block-flex h6{
+    padding-left: 5px;
+    margin-left: 5px;
+}
+.right-block-flex h5{
+    padding: 10px;
+
+}
+.right-block-flex h6{
+    padding-left: 5px;
+    margin-left: 5px;
+}
+#all-done{
+    display: none;
+    margin-left: 36.5%;
+    margin-top: 20px;
+
+    justify-content: center;
+    width: 15vw;
+}
+#password{
+    display: none;
+    margin-top: 20px;
+    margin-left: 35%;
+    justify-content: center;
+    width: 15vw;
+}
+#time{
+    display: none;
+    margin-top: 20px;
+    margin-left: 35%;
+    justify-content: center;
+    width: 15vw;
 }
 .preview{
     margin-top: 20px;
     /* font-size: larger; */
     text-align: center;
 }
+.pre-options li{
+    display: flex;
+    padding: 5px;
+    margin-left: 10px;
+}
+.preQNo{
+    display: block;
+}
 #pre-title{
-    margin-top: 20px;
+    margin: 20px;
     /* font-size: larger; */
     text-align: center;
 }
@@ -57,7 +115,6 @@ body{
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: scroll;
-
     background-size: cover;
     width: 50vw;
     height: 100vh;
@@ -103,8 +160,22 @@ body{
     border: solid white 2px;
 
 }
+/* #all-questions input{
+    padding: 5px 10px 5px 10px;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 5px;
+    width: 15vw;
+    height: 15px;
+    border: solid white 2px;
+
+} */
+
+
 button{
     background-color: rgba(0,0,0,0.5);
+    margin-left: 10px;
     color: white;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
     border-radius: 8px;
@@ -134,14 +205,90 @@ button{
     font-size: medium;
 }
 .question-field input{
-    margin-left: 20px;
-    height: 30px;
+    padding: 5px 10px 5px 10px;
+    margin-left: 10px;
+
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 5px;
+    width: 15vw;
+    height: 15px;
+    border: solid white 2px;
 }
-.question-field button{
+.answer-field input{
+    padding: 5px 10px 5px 10px;
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 5px;
+    width: 15vw;
+    height: 15px;
+    border: solid white 2px;
+}
+.radioInput{
+    margin-left: 10px;
+    background-color: rgba(0,0,0,0);
+    /* box-shadow: 5px 5px 5px rgba(0,0,0,0.5); */
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: solid white 2px;
+}
+.pre-radioInput{
+    margin-left: 10px;
+    background-color: rgba(0,0,0,0);
+    /* box-shadow: 5px 5px 5px rgba(0,0,0,0.5); */
+    color: white;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: solid white 2px;
+}
+.addoptionbutton{
+    background-color: rgba(0,0,0,0.5);
+    margin: 10px;
+    color: white;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: solid white 2px;
+    font-size: larger;
+    margin-left: 25px;
+}
+.optionInput{
+    padding: 5px 10px 5px 10px;
+
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 5px;
+    width: 10vw;
+    height: 15px;
+    border: solid white 2px;
+}
+.index-number{
+    padding: 5px 10px 5px 10px;
+    margin-left: 10px;
+    
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 5px;
+    width: 20px;
+    height: 10px;
+    border: solid white 2px;
+}
+/* .question-field button{
     margin-left: 10px;
     width: 50px;
     height: 35px;
-}
+} */
 #all-questions li{
     margin-top: 5px;
     width: auto;
@@ -150,6 +297,8 @@ button{
     background-color: rgba(255, 255,255,0.2);
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5) inset;
 }
+
+
 .options-field{
     padding: 20px;
 }
@@ -158,8 +307,5 @@ button{
     background-color: inherit;
     box-shadow: none;
     display: flex;
-}
-.index-number{
-    width: 30px;
 }
 

@@ -35,7 +35,7 @@
         <div class="left-block-flex">
             <h3 class="preview">Preview</h3>
             <div class="preview-body" id="preview-body">
-                <h1 id="pre-title"></h1>
+                <h1 id="pre-title"></h1> 
                 <div id="pre-questions">
 
                 </div>
@@ -60,9 +60,23 @@
                 
             </div>
 
+            <input type="text" id="password" placeholder="Enter a password for your Quiz"><br>
+            <input type="number" id="time" placeholder="Enter timing for quiz (in mins)">
+            <button id="all-done" onclick="allDone()">Create Quiz</button>
+
+
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+
+    <script src="assets/javascript/firebase.js"></script>
+
     <script src="assets/javascript/quizJS.js"></script>
+
     <script src="assets/javascript/dashBoardjavaScript.js"></script>    
 </body>
 </html>
