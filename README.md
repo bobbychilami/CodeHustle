@@ -1,20 +1,22 @@
 # MiniProject
 ![3-Best-programming-languages-to-learn-coding](https://user-images.githubusercontent.com/59655369/121802011-f89a1280-cc57-11eb-96d9-189df3fe144e.png)
 
-We will be creating our mini project in this Repository.
+CodeHustle 
 
-1. First of all we are creating a Learning Web Application.
-2. Everyone try to create your own designs in your Android Studio and then commit it to this Repo.
-3. If you are facing any problems let us know in the whatsapp group.
-4. We are going to add as many features as we can, but first we will create a full fledged offline learing app.
-5. We are adding a discuss section.
-
-
-
-
+1. CodeHustle is a Learning Website.
+2. It is created as a project for our 3rd year assessment (DSMP project), it has following features.
+3. It has a DSA play list where you will find 450+ questions which will guide you to master your dsa skills. 
+4. You can discuss or ask any doubts in the discuss section. 
+5. If you have some aptitude questions or of are a tutor who wants to give assignments, then the quiz creating tool is for you. 
+6. CodeHustle have tutorials of many programming languages and frameworks, these data are personally created by our team for easy understanding.
+7. We are going to add as many features as we can, you just have one job, Learn from this website and hone your skills to its fullest.
 
 
 
 
 
-Users: Bobby Chilami, Janhavi Kokare, Jyoti Rokade, Dhanashree Patil.
+
+
+
+
+Creators: Bobby Chilami, Janhavi Kokare, Jyoti Rokade, Dhanashree Patil.
