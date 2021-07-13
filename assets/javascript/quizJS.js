@@ -1,5 +1,13 @@
 
 
+const keyAnswer = {
+    titleOfQuiz : "",
+    passKey : "",
+    qNo : []
+};
+
+
+
 
 var preQuestions = document.querySelector("#pre-questions");
 function enterQuestion(id){
@@ -39,6 +47,7 @@ function getTitle(){
         titleQuiz.style.display = "none";
         quizNameButton.innerText = "X";
         preTitle.innerText = titleQuiz.value;
+        titleOfQuiz = titleQuiz.value;
         // preTitle.style.display = "block";
     }
     else{
@@ -121,11 +130,7 @@ function addOption(id){
 
 var pass = document.querySelector("#password");
 
-const keyAnswer = {
-     titleOfQuiz : preTitle.innerText,
-     passKey : pass.value,
-     qNo : []
-};
+
 function doneQ(id){
     if(id == 5)
     {
@@ -144,7 +149,8 @@ function doneQ(id){
             console.log("qNo : "+keyAnswer.qNo);
         }
     }
-    
+    post
+
     var questionNo = document.querySelector("#questionNo"+id);
     questionNo.innerHTML = preQNo.innerHTML;
 }
@@ -195,3 +201,16 @@ function deleteQues(id){
     deleteQueId.remove();
     index--;   
 }
+
+// const database = firebase.database.ref('quiz/'+titleOfQuiz);
+const questionAndAnswers = [
+    {
+        "index" : 1,
+        "question" : "What is your name",
+        "options" : [
+            {
+                "1" : "a. Bob",
+            }
+        ]
+    }
+]
