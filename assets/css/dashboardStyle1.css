@@ -52,7 +52,10 @@ header{
     margin: 35vh 0 0 1vw;
 }
 header h1{
-    margin: -14vh 0 0 8vw;
+    padding: 10px;
+}
+header .flex-for-logo{
+    display: flex;
 }
 header img{
 
@@ -64,8 +67,8 @@ header img{
 header h5{
     color: black;
     font-weight: 50;
-    margin-top: 15px;
-    margin-left: 3%;
+    padding: 5px;
+    margin-left: 7rem;
     font-size: 20px;
 }
 header strong{
@@ -86,8 +89,9 @@ header strong{
 }
 
 .three-bars{
-    margin-top: 600%;
+    top: 50%;
     margin-left: -3px;
+    position: absolute;
     display: block;
 }
 a{
@@ -96,8 +100,10 @@ a{
     color: white;
 }
 .login{
-    margin: 45vh 0 0 -5px;
-    position: relative;
+    bottom: 0;
+    margin-bottom: 1vh;
+    margin-left: -0.2rem;
+    position: absolute;
 }
 .bar{
     margin-top: 7px;
@@ -129,7 +135,7 @@ a{
 .logo{
     width: 50px;
     height: auto;
-    margin: 5px 0 0 -9px;
+    margin: 1vh 0 0 -9px;
 }
 
 .nav{
@@ -148,7 +154,7 @@ a{
 .nav.clickOnX{
     opacity: 1;
     height: 100%;
-    width: 700px;
+    width: 45rem;
     right: 0;
     top: 0;
     z-index: 10;
@@ -212,11 +218,11 @@ nav ul li a.changesize{
         opacity: 1;
     }
 }
-.main{
+/* .main{
     transform: rotate(45deg) translate3d(0,100px,0);
     
-}
-.main1{
+} 
+ .main1{
     display: flex;
     margin: -40vh 0 0 60vw;
  }
@@ -232,7 +238,7 @@ nav ul li a.changesize{
 .main3{
     display: flex;
     margin: 72vh 0 0 15vw;
-}
+} */
 /* .temp{
     width: 20%;
     height: 20%;
@@ -293,18 +299,31 @@ strong{
 
 } */
 
-.main.onScrollChange{
+/* .temp-section{
+    background: url(assets/images/CHtemp.png);
+    width: 40rem;
+} */
+.image-temp{
+    width: 120vw;
+    margin: -30vh 0 0 20vw;
+}
+.image-temp.onScrollChange{
     animation: whatever 2.5s ease both;
-    transition: 0.5s ease;
+    transition: 0.5s ease-in-out;
 }
 
 @keyframes whatever{
-    from{
-        transform: rotate(45deg) translate3d(0,-100px,0);
-        
+    0%{
+        transform: translate3d(150px,-150px,0);
     }
-    to{
-        transform: rotate(45deg) translate3d(0px,100px,0px);
+    45%{
+        transform: translate3d(50px,-50px,0);
+    }
+    50%{
+        transform: translate3d(50px,-50px,0);
+    }
+    100%{
+        transform: translate3d(0,0,0);
     }
 }
 
@@ -321,7 +340,7 @@ strong{
     padding: 10px;
 }
 
-.templates{
+/* .templates{
     position: relative;
     height: 30%;
     width: 30%;
@@ -334,7 +353,7 @@ strong{
 .template6 .template9{
     width: 10vw;
     height: auto;
-}
+} */
 footer{
     height: 50px;
     background-color: rgba(0,0,0,0.8);
@@ -344,7 +363,7 @@ footer{
 footer h6{
     padding-top: 15px;
 }
-
+/* 
 @media (max-width: 1300px) {
 
 
@@ -381,7 +400,7 @@ footer h6{
         position: absolute;
         border-radius: 8px;
         padding: 10px;
-        /* text-shadow: 2px 2px 5px rgb(136, 136, 136); */
+        text-shadow: 2px 2px 5px rgb(136, 136, 136);
         margin: 30vh 0 0 30px;
     }
     header h1{
@@ -391,7 +410,7 @@ footer h6{
     
         width: 80px;
         height: auto;
-        /*  */
+        
     }
     header h5{
         font-weight: 100;
@@ -409,4 +428,4 @@ footer h6{
         display: flex;
         margin: 57vh 0 0 28vw;
     }
-}
+} */

@@ -23,6 +23,9 @@ body{
     height: 100%;
     z-index: 0;
 }
+.h5-of-option{
+    margin-top: -7px;
+}
 .main-body-flex{
     display: flex;
     margin-top: -100vh;
@@ -42,9 +45,9 @@ body{
 }
 input{
     padding: 5px 10px 5px 10px;
-
+    margin: 5px;
     background-color: rgba(0,0,0,0.5);
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    /* box-shadow: 5px 5px 5px rgba(0,0,0,0.5); */
     color: white;
     border-radius: 5px;
     width: 10vw;
@@ -118,7 +121,8 @@ input{
     background-size: cover;
     width: 50vw;
     height: 100vh;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .right-block-flex h1{
@@ -216,7 +220,7 @@ button{
     height: 15px;
     border: solid white 2px;
 }
-.answer-field input{
+/* .answer-field input{
     padding: 5px 10px 5px 10px;
     margin-left: 50px;
     margin-top: 5px;
@@ -228,6 +232,19 @@ button{
     width: 15vw;
     height: 15px;
     border: solid white 2px;
+} */
+.answers{
+    text-align: center;
+    display: none;
+    justify-content: center;
+}
+#answerText{
+    display: none;
+}
+.answers li{
+    margin-left: 15px;
+    padding: 5px;
+    text-align: center;
 }
 .radioInput{
     margin-left: 10px;

@@ -1,9 +1,8 @@
-var main = document.querySelectorAll(".main");
+var image = document.querySelector(".image-temp");
 var nav = document.getElementById("nav-bar");
 var anchorTags = document.querySelectorAll("a");
 var lines = document.querySelectorAll(".line");
 
-var main1 = document.getElementById('main1');
 
 let header = document.getElementById("header-area");
 
