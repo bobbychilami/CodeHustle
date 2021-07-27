@@ -55,5 +55,7 @@ body{
     top: 0;
     left: 0;
     background-color: black;
+    border: 5px solid white;
+    
     display: none;
 }

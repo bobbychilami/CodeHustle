@@ -3,7 +3,6 @@ const database1 = firebase.database().ref("messages");
 function sendMessage(){
 
 
-    const message1 = document.querySelector("#message1").value;
     firebase.database().ref('users/'+firebase.auth().currentUser.uid)
     .get()
         .then((snapshot)=>{
@@ -11,9 +10,9 @@ function sendMessage(){
           if(snapshot.exists()){
              const nameOfSender = snapshot.val().name;
 
-              upload(nameOfSender,message1);
+              upload(nameOfSender);
               
-              childAdded(nameOfSender);
+              // childAdded(nameOfSender);
           }
           else{
             console.log("No data available");
@@ -21,16 +20,21 @@ function sendMessage(){
 
      });
 
+     
+
 }
 
-function upload(nameOfSender,message1){
-  database1.push().set({
+function upload(nameOfSender){
+  const message1 = document.querySelector("#message1");
+  if(message1.value.trim()!=""){
+     database1.push().set({
     "sender" : nameOfSender.trim(),
-    "message" : message1.trim()
+    "message" : message1.value.trim()
   });
+  }
+  message1.value = "";
 }
 
-function childAdded(nameOfSender){
   database1.on("child_added", function(snapshot1){
     var html = "";
     html += "<li>";
@@ -40,26 +44,25 @@ function childAdded(nameOfSender){
     document.querySelector("#group-message").innerHTML += html;
 
 });
-}
 
 
-  database1.on("child_removed",function (snapshot2){
-    document.getElementById( snapshot2.id).innerText = "This message has been removed";
-    document.querySelector("#message1").value = "";
-  })
-
-
+//   database1.on("child_removed",function (snapshot2){
+//     document.getElementById( snapshot2.id).innerText = "This message has been removed";
+//     document.querySelector("#message1").value = "";
+//   })
 
 
 
 
 
-function deleteMessage(self){
-    var messageId = self.id;
-  alert(messageId);
-    database1.child(messageId).remove();
 
-}
+
+// function deleteMessage(self){
+//     var messageId = self.id;
+//   alert(messageId);
+//     database1.child(messageId).remove();
+
+// }
 
 
 

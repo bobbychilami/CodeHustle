@@ -4,7 +4,8 @@ const data = {
     password : "",
     time : 0,
     questionAndAnswers : "",
-    answers : []
+    answers : [],
+    noOfQue : 0
 }
 
 
@@ -78,13 +79,19 @@ function enterOption(it,id){
 
 
     if(enterOptionButton.innerText == "Enter"){
-        option.innerText = indexNumber.value+". "+optionInput.value;
-        optionInput.style.display = "none";
-        enterOptionButton.innerText = "Edit";
-        option.style.display = "block";
-        optOfQNo.innerText = indexNumber.value+". "+optionInput.value;
-        optOfQNo.style.display = "block";
-        indexNumber.style.display = "none";
+        if(optionInput.value.trim()==""){
+            alert("Please Enter option");
+        }
+        else{
+            option.innerText = indexNumber.value+". "+optionInput.value;
+            optionInput.style.display = "none";
+            enterOptionButton.innerText = "Edit";
+            option.style.display = "block";
+            optOfQNo.innerText = indexNumber.value+". "+optionInput.value;
+            optOfQNo.style.display = "block";
+            indexNumber.style.display = "none";
+        }
+        
     }
     else{
         option.style.display = "none";
@@ -101,6 +108,7 @@ function deleteOption(it,id){
     var optionDeleteParameter = "#whole-option-"+it+"opt"+id;
     var wholeOption = document.querySelector(optionDeleteParameter);
     wholeOption.remove();
+    document.querySelector("#preOptNo"+id+"and"+it).remove();
     iterator--;
 }
 
@@ -119,7 +127,7 @@ function addOption(id){
     if(curr>prev)
     iterator = 1;
 
-    optOfQNo.innerHTML += "<li><input type='radio' class='pre-radioInput' name = 'preOption"+id+"' > <h6 id='preOpt"+iterator+"OfQNo"+id+"' ></h6></li>";
+    optOfQNo.innerHTML += "<li id='preOptNo"+id+"and"+iterator+"'><input type='radio' class='pre-radioInput' name = 'preOption"+id+"' value = '"+iterator+"'> <h6 id='preOpt"+iterator+"OfQNo"+id+"' ></h6></li>";
 
 
     var html = "";
@@ -139,6 +147,7 @@ var pass = document.querySelector("#password");
 
 
 function doneQ(id){
+
 
     var titleToData = document.querySelector("#queNo"+id);
 
@@ -203,7 +212,7 @@ function addQuestion(){
         html += "<button class='doneButton' onclick = 'doneQ("+index+");' > Done </button>";
         html += "</li>";
 
-        
+        data.noOfQue = index;
         index++;
         totalQuestions.innerHTML += html;  
         keyAnswer.flag = false;  
@@ -258,6 +267,7 @@ const timing = document.querySelector("#time");
                 window.open("quizSection.html","_top");
             }
         );
+        
 
         
     }
