@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Registration</title>
-    <link rel="stylesheet" href="assets/css/dashboardStyle1.css">
-    <link rel="stylesheet" href="assets/css/reg1.css">
-    
+    <link rel="stylesheet" href="reg1.css">
+
 </head>
 
 <body>
@@ -32,9 +31,16 @@
         </div>
         <div class="login"><a href="login.html">Login</a></div>
     </div>
-    
-    <div class="whole-block">
-            <h1>Registration</h1>
+    <div class="main">
+        <form action="">
+            <div id="name">
+                <h2 class="name">Name</h2>
+                <input class="firstname" type="text" name="first_name"><br>
+                <lable class="firstlabel">First name</lable>
+                <input class="lastname" type="text" name="last_name"><br>
+                <lable class="lastlabel">Last name</lable>
+            </div>
+
 
             <input type="text" id="full-name" placeholder=" Your Name">    
                 
@@ -50,15 +56,65 @@
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
-    
-    
-    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
-    
-    <script src="assets/javascript/firebase.js"></script>
 
-    <script src="assets/javascript/registration.js"></script>
-    <script src="assets/javascript/dashBoardjavaScript.js"></script>
+            <h2 class="name">Email</h2>
+            <input class="email" type="text" name="email">
+            <br>
+
+
+            <h2 class="name"> Subject</h2>
+            <select class="option" name="subject">
+                <option disabled="disabled" selected="selected">--Choose Option--</option>
+                <option>subject 1</option>
+                <option>subject 2</option>
+                <option>subject 3</option>
+                <option>subject 4</option>
+            </select>
+            <br>
+
+
+
+            <h2 class="name">Date Of Birth</h2>
+            <input class="dateofbirth" type="date" name="DOB"><br>
+
+            <br>
+
+
+
+            <h2 class="name">Gender</h2>
+            <label class="radio">
+                <input class="radio_one" type="radio" name="gender">Male
+                <input class="radio_two" type="radio" name="gender">Female
+
+            </label>
+            <br>
+
+
+
+            <!--<h2  class="name">Set Password</h2>
+                <br>
+                <h2 class="name">user name</h2>
+                <input class="username" type="text" name="user_name"><br>
+                <label class="userlabel" >user name</label>
+                <br>
+                
+                <h3 class="name">Password</h3>
+                <input  class="password"type="text" name="pswd"><br>
+                <label class="passwordlabel">password</label>
+                <br>
+                
+                <h3 class="name">Confirm Password</h3>
+                <input  class="cpassword" type="text" name="cpswd"><br>
+                <label class="cpasswordlabel">confirm passwordr</label><br>
+                  <br>
+                  <br>-->
+
+            <!--<button type="submit"> Register</button>-->
+            <button type="next">Next</button>
+
+        </form>
+
+    </div>
 </body>
 
 </html>
