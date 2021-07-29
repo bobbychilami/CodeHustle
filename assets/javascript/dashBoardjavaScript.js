@@ -54,16 +54,14 @@ function linesAnimation(){
 
 function loadOnScreen(){
   if(!thirdFlag){
-    for(var j=0;j<main.length;j++){
-      main[j].classList.add('onScrollChange');
-    }
+    image.classList.add("onScrollChange");
     thirdFlag = true;
   }
   else
   {
-    for(var j=0;j<main.length;j++){
-      main[j].classList.remove('onScrollChange');
-    }
+    image.classList.remove("onScrollChange");
+
     thirdFlag = false;
   }
 }
+

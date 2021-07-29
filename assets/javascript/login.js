@@ -6,25 +6,25 @@ function loginFunction(){
     const reemail1 = document.querySelector("#reemailAddress").value;
     const password2 = document.querySelector("#passwordText").value;
 
-alert("hmmm");
+    alert("hmmm");
 
 
-if(email2.trim()==""){
-    alert("Enter Email");
-}
-else if(password2.trim().length<7)
-alert("Enter Password more than 7 characters");
-else if(email2!=reemail1)
-{
-    alert("Email do not match");
-}
-else 
-{
-    
-      auth.signInWithEmailAndPassword(email2,password2).then(function(){
-        authenticated();
-      });     
-}
+    if(email2.trim()==""){
+        alert("Enter Email");
+    }
+    else if(password2.trim().length<7)
+    alert("Enter Password more than 7 characters");
+    else if(email2!=reemail1)
+    {
+        alert("Email do not match");
+    }
+    else 
+    {
+        
+        auth.signInWithEmailAndPassword(email2,password2).then(function(){
+            authenticated();
+        });     
+    }
 
 
 }
@@ -40,4 +40,7 @@ function authenticated(){
         fun1();
     }
     );
+}
+function register(){
+    window.open("reg1.html","_self");
 }

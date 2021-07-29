@@ -44,7 +44,7 @@ function frametheFunction(){
     if(password.trim() == htmldata.pass){
 
         var htmlData = "<div class='start-button'>";
-        htmlData += "<div class='instructions'></div>";
+        htmlData += "<div class='instructions'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quam voluptatem, enim alias non veniam quasi nobis ex repellendus architecto laborum voluptatibus cupiditate quisquam tempora, nulla debitis veritatis asperiores in dolorem soluta. Repudiandae temporibus error exercitationem dolore vel, illo suscipit nihil placeat laudantium distinctio iste debitis praesentium? Sapiente, cumque mollitia.        </div>";
         htmlData += "<button onclick='startTheQuiz(), timer();'>Start</button>"
         htmlData += "</div>"
 
@@ -58,6 +58,7 @@ function frametheFunction(){
     }
     
 }
+
 function timer(){
     var time1 = document.querySelector("#timer");
     var min = htmldata.time;

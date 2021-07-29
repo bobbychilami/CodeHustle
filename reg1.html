@@ -13,12 +13,14 @@
 <body>
     
     <nav class="nav" id="nav-bar">
-        <ul>
+        <ul id="nav-bar-menu">
             <li class="aTag"><a href="dashboard.html" target="_blank">Home</a><div class="line"></div></li>
             <li class="aTag"><a href="DSA.html" target="_blank">Practice</a><div class="line"></div></li>
-            <li class="aTag"><a href="#">Tutorials</a><div class="line"></div></li>
-            <li class="aTag"><a href="#">Quizes</a><div class="line"></div></li>
+            <!-- <li class="aTag"><a href="#">Tutorials</a><div class="line"></div></li> -->
+            <li class="aTag"><a href="quizSection.html">Quizes</a><div class="line"></div></li>
+            <li class="aTag"><a href="quizUI.html">Create a Quiz</a><div class="line"></div></li>
             <li class="aTag"><a href="chat.html">Discuss</a><div class="line"></div></li>
+
         </ul>
     </nav>
     <div class="menu">
@@ -28,25 +30,21 @@
             <div class="second bar"></div>
             <div class="third bar"></div>
         </div>
-        <div class="login"><a href="#">Login</a></div>
+        <div class="login"><a href="login.html">Login</a></div>
     </div>
     
     <div class="whole-block">
             <h1>Registration</h1>
 
-            <input type="text" id="full-name" placeholder="Your Name">    
+            <input type="text" id="full-name" placeholder=" Your Name">    
                 
- 
-            <div class="forflex">
-                <input  type="text"  id="inputEmail" placeholder="Email Address"> <input type="text" id="reemail" placeholder="Re-Enter Email Address"> 
-            </div> 
+            <input  type="text"  id="inputEmail" placeholder="  Email Address"> 
     
-            <input type="password" id="inputPass" placeholder="Password">
+            <input type="password" id="inputPass" placeholder=" Password">
             
-            <br>
-
             <button onclick="register();">Create an Account</button>
-            <a href="./login.html" target="_blank"><button>Login</button></a>
+            <br>
+            <button onclick="loginFun();">Login</button>
     
         </div>
     </div>

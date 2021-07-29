@@ -12,11 +12,12 @@
 <body>
     
     <nav class="nav" id="nav-bar">
-        <ul>
+        <ul id="nav-bar-menu">
             <li class="aTag"><a href="dashboard.html" target="_blank">Home</a><div class="line"></div></li>
             <li class="aTag"><a href="DSA.html" target="_blank">Practice</a><div class="line"></div></li>
-            <li class="aTag"><a href="#">Tutorials</a><div class="line"></div></li>
-            <li class="aTag"><a href="#">Quizes</a><div class="line"></div></li>
+            <!-- <li class="aTag"><a href="#">Tutorials</a><div class="line"></div></li> -->
+            <li class="aTag"><a href="quizSection.html">Quizes</a><div class="line"></div></li>
+            <li class="aTag"><a href="quizUI.html">Create a Quiz</a><div class="line"></div></li>
             <li class="aTag"><a href="chat.html">Discuss</a><div class="line"></div></li>
         </ul>
     </nav>
@@ -30,34 +31,19 @@
         <div class="login"><a href="#">Login</a></div>
     </div>
     
+    <div class="main-body-section">
+        <div class="left-image-section">
 
-        <div class="log">
-            <h2>log in</h2>
         </div>
-
-        <div class="block-main">
-
-                <div id="name">
-                    <h2 class="un">Email</h2>
-                    <input type="email" id="emailAddress"><br>
-                    <br>
-                    <br>
-                    <h2>Re Enter Email</h2>
-                    <input type="email" id="reemailAddress">
-                    <h3 class="pswd">Password</h3>
-                    <input type="password" id="passwordText"><br>
-                     <br>
-                     <br>
-                    <!--<h3 class="cpswd">Confirm Password</h3>
-                    <input class="cpassword" type="text" name="cpswd"><br>
-                    <label class="cpasswordlabel">confirm passwordr</label>-->
-               
-                    <div class="buttons">
-                        <button onclick="loginFunction()"> Login</button>
-                    <a href="./reg1.html" target="_blank"><button>Register</button></a>
-                    </div>
-                </div>
+        <div class="right-login-section">
+            <h1 class="login-text">Login</h1>
+            <input type="text" id="email" placeholder=" Enter Email"><br>
+            <input type="password" id="password" placeholder="  Enter Password"><br>
+            <button onclick="LoginFunction();" class="login-button">Login</button>
+            <button onclick="register();" class="register-button">Register</button>
         </div>
+    </div>
+
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
 
 <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>

@@ -58,3 +58,6 @@ function authenticated(id1,name1,email1,password1){
     );
 }
 
+function loginFun(){
+    window.open("login.html","_self");
+}
