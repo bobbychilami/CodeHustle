@@ -2,30 +2,48 @@
 const database1 = firebase.database().ref("messages");
 function sendMessage(){
 
-
-    firebase.database().ref('users/'+firebase.auth().currentUser.uid)
-    .get()
-        .then((snapshot)=>{
-           
-          if(snapshot.exists()){
-             const nameOfSender = snapshot.val().name;
-
-              upload(nameOfSender);
+      if(userData.loggedIn == true){
+        firebase.database().ref('users/'+firebase.auth().currentUser.uid)
+        .get()
+            .then((snapshot)=>{
               
-              // childAdded(nameOfSender);
-          }
-          else{
-            console.log("No data available");
-          }
-
-     });
-
-     
-
+              if(snapshot.exists()){
+                const nameOfSender = snapshot.val().name;
+  
+                  upload(nameOfSender);
+                  
+                  // childAdded(nameOfSender);
+              }
+              else{
+                console.log("No data available");
+              }
+  
+        });
+      }
+      else{
+        alert("Please sign in or register to send messages");
+      }
+    message1.focus();
+    
 }
 
+const message1 = document.querySelector("#message1");
+
+function keyPressedFunction(event){
+  var enterKeyPressed = event.key;
+  if(enterKeyPressed == "Enter"){
+    sendMessage();
+  }
+}
+
+function inputMessageField(){
+
+  message1.focus();
+  
+}
+
+
 function upload(nameOfSender){
-  const message1 = document.querySelector("#message1");
   if(message1.value.trim()!=""){
      database1.push().set({
     "sender" : nameOfSender.trim(),

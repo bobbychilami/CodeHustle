@@ -55,7 +55,29 @@ button:hover{
     border: white 2px solid;
     color: white;
 }
-
+#upload-label{
+    margin-left: -25.25%;
+    padding: 7px 30px 7px 30px;
+    background-color: rgb(177, 54, 54);
+    border-radius: 7px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
+    /* border: solid white 1px; */
+    cursor: pointer;
+}
+#files{
+    
+    width: 15vw;
+    font-size: 17px;
+    color: #b8b8b8;
+    height: 1.4rem;
+    border-radius: 7px;
+    background-color: transparent;
+    border: transparent solid 2px;
+    transition: 0.3s ease;
+}
+a{
+    cursor: pointer;
+}
 
 
 

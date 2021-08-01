@@ -5,9 +5,10 @@
 body{
     margin: 0;
     padding: 0;
-    color: black;
+    color: white;
     background: url(../images/bg.jpg);
     background-size: cover;
+
 }
 .main-body-section{
     display: flex;
@@ -22,7 +23,7 @@ body{
     margin-left: 50vw;
     width: 50vw;
     height: 100vh;
-    background: linear-gradient(to right,black,rgba(0,0,0,0.5));
+    background: rgba(0,0,0,0.5);
     /* border-left: white 2px solid; */
     /* box-shadow: 5px 5px 5px 10px rgba(0,0,0,0.7); */
     position: absolute;
@@ -51,12 +52,12 @@ input{
 
 }
 .login-button{
-
+    cursor: pointer;
     border-radius: 7px;
     margin: 2rem 0 0 10%;
     width: 35vw;
     height: 2rem;
-    background-color: white;
+    background-color: rgb(177, 54, 54);
     box-shadow: 5px 5px 10px rgba(0,0,0,0.9);
     border: black solid 2px;
     transition: 0.3s ease;
@@ -68,12 +69,12 @@ input{
 
 }
 .register-button{
-
+    cursor: pointer;
     border-radius: 7px;
     margin: 2rem 0 0 10%;
     width: 35vw;
     height: 2rem;
-    background-color: white;
+    background-color: rgb(177, 54, 54);
     box-shadow: 5px 5px 10px rgba(0,0,0,0.9);
     border: black solid 2px;
     transition: 0.3s ease;

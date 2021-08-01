@@ -1,3 +1,4 @@
+var header = document.getElementById("header-area");
 
 window.addEventListener('scroll',function(){
     var value = window.scrollY;
@@ -12,3 +13,4 @@ window.addEventListener('scroll',function(){
         image.classList.remove("onScrollChange");
       }
   });
+

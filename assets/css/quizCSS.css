@@ -4,7 +4,7 @@
 }
 body{
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sans-serif;
     background-color: #000000;
     
 
@@ -34,18 +34,25 @@ body{
 }
 .left-block-flex{
     width: 45vw;
+    height: 100vh;
     background-color: rgba(255, 255,255,0.2);
     z-index: 2;
     /* background: linear-gradient(to bottom,rgba(0,0, 0, 0.9),rgba(255, 255,255,0.2)); */
-
+    overflow-x: hidden;
+    overflow-y: auto;
+    justify-content: center;
     border: 3px solid rgba(255, 255, 255, 0.726);
     /* border-radius: 5px; */
     box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
 
 }
+::-webkit-scrollbar{
+    background-color: transparent;
+}
+
 input{
     padding: 5px 10px 5px 10px;
-    margin: 5px;
+    margin-right: 5px;
     background-color: rgba(0,0,0,0.5);
     /* box-shadow: 5px 5px 5px rgba(0,0,0,0.5); */
     color: white;
@@ -186,6 +193,7 @@ button{
     width: 50px;
     height: 30px;
     border: solid white 2px;
+    cursor: pointer;
 }
 #name-of-quiz{
     display: none;

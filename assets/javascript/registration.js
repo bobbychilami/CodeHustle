@@ -1,5 +1,5 @@
 
-const auth = firebase.auth();
+// const auth = firebase.auth();
 const users = firebase.database().ref("users");
 function register(){
 
@@ -7,7 +7,7 @@ function register(){
     
 const name1 = document.querySelector("#full-name").value;
 const email1 = document.querySelector("#inputEmail").value;
-const reemail = document.querySelector("#reemail").value;
+const reemail = email1
 const password1 = document.querySelector("#inputPass").value;
     if(email1.trim()==""){
         alert("Enter Email");
@@ -24,7 +24,10 @@ const password1 = document.querySelector("#inputPass").value;
           auth.createUserWithEmailAndPassword(email1,password1).then(function(userAuth){
             const id1 = userAuth.user.uid;
             authenticated(id1,name1,email1,password1);
-          });     
+          },function(error){
+              alert(error.message);
+          }
+          );     
  }
     
 }

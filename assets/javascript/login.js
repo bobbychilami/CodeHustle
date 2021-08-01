@@ -1,12 +1,10 @@
-const auth = firebase.auth();
+// const auth = firebase.auth();
 
 function loginFunction(){
 
-    const email2 = document.querySelector("#emailAddress").value;
-    const reemail1 = document.querySelector("#reemailAddress").value;
-    const password2 = document.querySelector("#passwordText").value;
-
-    alert("hmmm");
+    const email2 = document.querySelector("#email").value;
+    const reemail1 = email2;
+    const password2 = document.querySelector("#password").value;
 
 
     if(email2.trim()==""){
@@ -23,14 +21,17 @@ function loginFunction(){
         
         auth.signInWithEmailAndPassword(email2,password2).then(function(){
             authenticated();
-        });     
+        },function(error){
+            alert(error.message);
+        }
+        );     
     }
 
 
 }
 
 function fun1(){
-    window.open("chatGroup.html","_top");
+    window.open("dashboard.html","_self");
 }
 
 function authenticated(){
