@@ -4,77 +4,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeHustle</title>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
-        body{
-            background-color: white;
-        }
-        .main{
-            text-align: center;
-            position: absolute;
-            justify-content: center;
-            text-align: center;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            margin: auto;
-            border-radius: 50%;
-            width: 25vw;
-            height: 50vh;
-            /* background: url(assets/images/pic4.jpg); */
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            background-attachment: scroll;
-            /* border: solid black 2px; */
-            box-shadow: 10px 10px 10px rgba(0,0,0,0.7) ;
-        }
-        .blur-sub{
-            width: 50%;
-            height: 50%;
-            top: 25%;
-            left: 25%;
-            position : absolute;
-            border-radius: 50%;
-            /* background-color: red; */
-            /* background: url(assets/images/pic4.jpg); */
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            background-attachment: fixed;
-            overflow: hidden;
-            filter: blur(15px);
-        }
-        .sub{
-            width: 50%;
-            height: 50%;
-            /* background-color: rgba(255, 255, 255, 0.377); */
-            top: 25%;
-            left: 25%;
-            position : absolute;
-            border-radius: 50%;
-            /* border: black 2px solid; */
-            box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
-        }
-        img{
-            margin: 30px 0 0 -65px;
-            position: absolute;
-            width: 8vw;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/dashboardStyle1.css">
+
+    <title>Dashboard</title>
 </head>
-<body>
-    <h5 id="time"></h5>
-    <div class="main">
-        <div class="blur-sub">
+<body onload="loadOnScreen()">
+
+<nav class="nav" id="nav-bar">
+    <ul id="nav-bar-menu">
+        <li class="aTag"><a href="dashboard.html" target="_blank">Home</a><div class="line"></div></li>
+        <li class="aTag"><a href="DSAMenu.html" target="_blank">Practice</a><div class="line"></div></li>
+        <!-- <li class="aTag"><a href="#">Tutorials</a><div class="line"></div></li> -->
+        <li class="aTag"><a href="quizSection.html">Quizes</a><div class="line"></div></li>
+        <li class="aTag"><a href="quizUI.html">Create a Quiz</a><div class="line"></div></li>
+        <li class="aTag"><a href="chatGroup.html">Discuss</a><div class="line"></div></li>
+    </ul>
+</nav>
+<div class="menu">
+    <a href="dashboard.html"><img src="assets/images/CHlogoWhite.png" alt="bg" class="logo" ></a>
+    <div class="three-bars" id="three-bars" onclick="makeItX(this); CallForMenuBar(); linesAnimation();">
+        <div class="first bar"></div>
+        <div class="second bar"></div>
+        <div class="third bar"></div>
+    </div>
+    <div class="login"><a href="login.html">Login</a></div>
+</div>
+
+
+
+
+
+
+<section class="first-section">
+    <header id="header-area">
+        <div class="flex-for-logo">
+           <img src="assets/images/CHlogoBlack.png" alt="">
+           <h1 class="headerH1">
+               Code<strong>Hustle</strong> 
+           </h1>
+       </div>
+       <div class="headerh6">All You Want to Learn for your Dream Job is Here.</div>
+   </header>  
+    <div class="temp-section">
+        <img src="assets/images/CHTemp.png" alt="" class="image-temp">
+    </div>
+
+</section>
+
+<section class="second-section">
+    <div class="first-block block">
+        <div class="first-row row">
+            <br>
+            <a href="assets/data/Cwebpage.html" target="_blank"><h1>C Programming</h1></a>
+            <br> <br> C Language is known as parent language among all the languages. It is the first language in CSE Syllabus.
+            <br>
+            <br>
         </div>
-        <div class="sub">
-            <a href="dashboard.html"><img src="assets/images/CHlogoBlack.png" alt=""></a>
+        <div class="second-row row">
+
+            <br>
+            <a href="assets/data/#" target="_blank"><h1>C Programming</h1></a>
+            <br> <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, ullam consequatur! Reiciendis, quo dicta. Veritatis, ipsam debitis possimus placeat ullam rerum quis accusamus voluptatum asperiores in deserunt libero facilis accusantium. Ullam provident voluptatum ut distinctio laboriosam dolor earum, quidem maxime, ipsum natus dolorem reiciendis fuga voluptatem nostrum saepe. Veniam, nulla.
+            <br>
+            <br>
+        </div>
+        <div class="third-row row">
+
+            <br>
+            <a href="assets/data/#" target="_blank"><h1>C Programming</h1></a>
+            <br> <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, ullam consequatur! Reiciendis, quo dicta. Veritatis, ipsam debitis possimus placeat ullam rerum quis accusamus voluptatum asperiores in deserunt libero facilis accusantium. Ullam provident voluptatum ut distinctio laboriosam dolor earum, quidem maxime, ipsum natus dolorem reiciendis fuga voluptatem nostrum saepe. Veniam, nulla.
+            <br>
+            <br>
         </div>
     </div>
+    <div class="second-block block">
+        <div class="first-row row">
+
+        <br>
+            <a href="assets/data/#" target="_blank"><h1>C Programming</h1></a>
+            <br> <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, ullam consequatur! Reiciendis, quo dicta. Veritatis, ipsam debitis possimus placeat ullam rerum quis accusamus voluptatum asperiores in deserunt libero facilis accusantium. Ullam provident voluptatum ut distinctio laboriosam dolor earum, quidem maxime, ipsum natus dolorem reiciendis fuga voluptatem nostrum saepe. Veniam, nulla.
+            <br>
+            <br></div>
+        <div class="second-row row">
+            <br>
+            <a href="assets/data/#" target="_blank"><h1>C Programming</h1></a>
+            <br> <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, ullam consequatur! Reiciendis, quo dicta. Veritatis, ipsam debitis possimus placeat ullam rerum quis accusamus voluptatum asperiores in deserunt libero facilis accusantium. Ullam provident voluptatum ut distinctio laboriosam dolor earum, quidem maxime, ipsum natus dolorem reiciendis fuga voluptatem nostrum saepe. Veniam, nulla.
+            <br>
+            <br>
+
+        </div>
+        <div class="third-row row">
+
+            <br>
+            <a href="assets/data/#" target="_blank"><h1>C Programming</h1></a>
+            <br> <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, ullam consequatur! Reiciendis, quo dicta. Veritatis, ipsam debitis possimus placeat ullam rerum quis accusamus voluptatum asperiores in deserunt libero facilis accusantium. Ullam provident voluptatum ut distinctio laboriosam dolor earum, quidem maxime, ipsum natus dolorem reiciendis fuga voluptatem nostrum saepe. Veniam, nulla.
+            <br>
+            <br>
+        </div>    </div>
+    
+</section>
+
+<footer>
+    <h6>Made with love by</h6>
+</footer>
+    <script src="assets/javascript/dashBoard.js"></script>
+    <script src="assets/javascript/dashBoardjavaScript.js"></script>
 </body>
-</html>
+</html> 
