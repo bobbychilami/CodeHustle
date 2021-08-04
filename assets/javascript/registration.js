@@ -45,7 +45,7 @@ function checkAlreadyUser(){
 }
 
 function fun1(){
-    window.open("chatGroup.html","_top");
+    window.open("index.html","_top");
 }
 function authenticated(id1,name1,email1,password1){
     users.child(id1).set({

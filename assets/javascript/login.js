@@ -30,7 +30,7 @@ function loginFunction(){
 }
 
 function fun1(){
-    window.open("index.html","_self");
+    window.open("../index.html","_self");
 }
 
 function authenticated(){
