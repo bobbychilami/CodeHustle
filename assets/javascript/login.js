@@ -1,4 +1,3 @@
-// const auth = firebase.auth();
 
 function loginFunction(){
 
@@ -31,7 +30,7 @@ function loginFunction(){
 }
 
 function fun1(){
-    window.open("dashboard.html","_self");
+    window.open("index.html","_self");
 }
 
 function authenticated(){

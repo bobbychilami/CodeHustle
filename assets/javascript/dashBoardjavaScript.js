@@ -118,8 +118,13 @@ function loadOnScreen(){
   
 }
 
+// quiz/Test2/results .get() .then(snapshot)
+// obliqeu(/) is used to access the sub-references of a particular reference.
+// .get() is used to fetch the latest data snapshot from database
 
-const auth = firebase.auth();
+var auth = firebase.auth();
+// onAuthStateChanged is used when a user logs in, registers or logs out, it returns boolean value
+// => is used to create a function with or without attributes
 auth.onAuthStateChanged((firebaseUser)=>
     {
       var logDiv = document.querySelector(".login");
