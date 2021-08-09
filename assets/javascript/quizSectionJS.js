@@ -18,12 +18,13 @@ const privateData = (
                 wrong : 0,
                 whichCorrect : []
             }
-            function setAnswers(ans){
-                answers = ans;
+            function setAnswers(ans,id){
+
+                answers[id] = ans;
             }
-            function checkAnswers(ans){
-                for(var i=1;i<answers.length;i++){
-                    if(ans[i]==answers[i]){
+            function checkAnswers(ans,id){
+                for(var i=1;i<answers[id].length;i++){
+                    if(ans[i]==answers[id][i]){
                         data.correct++;
                         data.whichCorrect[i] = "correct";
                         data.marks++;
@@ -76,7 +77,7 @@ function getAllQuizes(){
                 htmldata.title[i] = childData.titleOfQuiz;
                 htmldata.time[i] = childData.time;
                 htmldata.noOfQue[i] = childData.noOfQue;
-                dataBlock.setAnswer(childData.answers);
+                dataBlock.setAnswer(childData.answers,i);
                 i++;
             });
             
@@ -136,7 +137,7 @@ function timer(id){
             if(min<0){
                 clearInterval(x);
                 alert("Test Ended");
-                confirmExit();
+                Exit(id);
             }
             else if(min<10)
             {
@@ -164,6 +165,8 @@ var x1;
 function timerOf1min(){
     var time2 = document.getElementById("oneMinTimer");
     var startButton = document.querySelector("#theStartButton");
+    startButton.style.backgroundColor = "rgba(255,255,255,0.18)";
+    startButton.disabled = true;
     var sec = 60;
     x1 = setInterval(
         function(){
@@ -173,8 +176,8 @@ function timerOf1min(){
                 if(sec==0)
                 {
                     clearInterval(x1);
-                    startTheQuiz();
-
+                    startButton.style.backgroundColor = "black";
+                    startButton.disabled = false;
                     time2.innerText = "00:00s";
                     // clearInterval();
                 }
@@ -182,6 +185,7 @@ function timerOf1min(){
         },1000
     );
 }
+
 function startTheQuiz(id){
     
     var div = document.querySelector("#main-body");
@@ -215,7 +219,7 @@ function Exit(id){
 
 function showResults(result,id){
     var htmlresult = "<div class='result-section'>";
-    htmlresult += "<div class='result' id='result'><h2>You scored: </h2><h1>"+result.marks+"/"+result.total+"</h1></div><button><a href='dashboard.html'>click</a></button></div>";
+    htmlresult += "<div class='result' id='result'><h2>You scored: </h2><h1>"+result.marks+"/"+result.total+"</h1></div><button><a href='../index.html'>click</a></button></div>";
     var div = document.querySelector("#main-body");
 
     div.innerHTML = htmlresult;
@@ -238,7 +242,7 @@ function confirmExit(id1){
         
     }
 
-    var Results = dataBlock.checkAnswer(responses.answers);
+    var Results = dataBlock.checkAnswer(responses.answers,id1);
     answerArray.ans[id1] = Results;
     showResults(Results,id1);
     

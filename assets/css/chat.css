@@ -3,177 +3,67 @@
     margin: 0;
 }
 body{
-    padding: 0;
-    margin: 0;
-    position: relative;
-    background: linear-gradient(to right,rgb(34, 38, 63),rgb(83, 83, 83),rgb(65, 65, 65));
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-attachment: scroll;
-    background-size: cover;
-    font-family: sans-serif;
-    scroll-behavior: smooth;
-    font-size: large;
-
-}
-
-
-.menu{
-    height: 100%;
-    width: 50px;
-    right: 0;
-    top: 0;
-    z-index: 1;
-    position: fixed;
-    padding-left: 15px;
+    width: 100vw;
+    height: 100vh;
     background-color: black;
-    transition: 0.3s;
-    align-items: center;
-
+    /* background: url(../images/patrick-tomasso-0V3qHmSV1kM-unsplash.jpg); */
 }
-img{
-    margin: 10px 0 0 -10px;
-    width: 60px;
-    height: auto;
-}
-.three-bars{
-    margin-top: 600%;
-    margin-left: -3px;
-    display: block;
-}
-.menu a{
-    text-decoration: none;
-    font-size: large;
-    color: white;
-}
-.login{
-    margin: 650% 0 0 -5px;
-}
-.bar{
-    margin-top: 7px;
-    width: 40px;
-    height: 3px;
-    background-color: white;
-    transition: 0.3s ease;
-}
-.first .second .third{
-    width: 45px;
-    height: 3px;
-    background-color: white;
-    transition: 1s ease;
-}
-.change .first{
-    -webkit-transform: rotate(-45deg) translate(-8px,6px);
-    transform: rotate(-45deg) translate(-8px,6px);
-}
-.change .second{
-    opacity: 0;
-}
-.change .third{
-    opacity: 1;
-    -webkit-transform: rotate(45deg) translate(-8px,-6px);
-    transform: rotate(45deg) translate(-8px,-6px);
-}
-
-
-.nav{
-    height: 100%;
-    width: 50px;
-    right: 0;
-    top: 0;
-    z-index: 1;
-    position: fixed;
-    padding-left: 15px;
-    background-color: black;
-    transition: 0.3s ease;
-    align-items: center;
-    opacity: 0;
-}
-.nav.clickOnX{
-    opacity: 1;
-    height: 100%;
-    width: 700px;
-    right: 0;
-    top: 0;
-    z-index: 1;
-    align-items: center;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.9);
-    overflow-x: hidden;  
-    transition: 0.5s ease;
-}
-ul{
-    list-style: none;
-    margin-top: 250px;
-    text-align: left;
-}
-li{
+.main-block-about{
     display: flex;
+    /* top: 20%;
+    left: 10%; */
+    width: 100vw;
+    height: 100vh;
+    /* position: absolute; */
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
-.line{
-    margin: 40px 100px 0 20px;
+.bob{
+    background:  url(../images/bob.jpg);
+
+}
+.bob:hover{
+    transform: translate3d(8px, 8px, 8px);
+
+}
+.jan{
+
+    background: url(../images/jan.jpg);
+
+}
+.jan:hover{
+    transform: translate3d(8px, 8px, 8px);
+
+}
+.jyo{
+
+    background: url(../images/jyo.jpeg);
+
+}
+.jyo:hover{
+    transform: translate3d(8px, 8px, 8px);
+
+}
+/* .dha{
+    background: url(../images/jan.jpg);
+    
+} */
+.dha:hover{
+    transform: translate3d(8px, 8px, 8px);
+
+}
+.block-img{
+    /* padding: 25vh 20vw 25vh 20vw; */
     width: 100%;
-    background-image: linear-gradient(to right,white,rgba(0,0,0,0.2));
-    height: 3px;
+    height: 100%;
+    margin: 0 25vw 0 0;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: inherit;
+    background-size: cover;
     transition: 0.5s ease;
 }
-.line.lineAnimate{
-    animation: reveal 1s ease both;
-}
-@keyframes reveal{
-    from{
-        transform: translateX(400px);
-    }
-    to{
-        transform: translateX(0);
-    }
-}
-nav ul li a{
-    margin: 20px 0 0 25px;
-    font-size: 25px;
-    display: block;
-    text-decoration: none;
-    color: white;
-    overflow-block: hidden;
-    transition: 0.5s ease;
-}
-nav ul li a:hover{
-    color: red;
-}
-nav ul li a:hover.line{
-    width: 0;
-}
-nav ul li a.changesize{
-    animation: BottomToUp 1s ease both 0.3s;
-}
-@keyframes BottomToUp{
-    from{
-        transform: translateY(-25px);
-        opacity: 0;
-    }
-    to{
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-footer{
-    height: 50px;
-    background: linear-gradient(to bottom,rgb(53, 52, 52),rgb(65, 65, 65));
-    color: white;
-    text-align: center;
-    z-index: 0;
-}
-h6{
-    padding-top: 15px;
-}
-.block{
-    margin: 20% 40% 30% 30%;
-    width: 30%;
-    height: 50%;
-    background-color: rgb(255,255,255,0.5);
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
-    padding: 50px 10px 50px 10px;
-}
-
-
-
+/* ::-webkit-scrollbar{
+    background-color: transparent;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+} */

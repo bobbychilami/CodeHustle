@@ -44,3 +44,15 @@ function authenticated(){
 function register(){
     window.open("reg1.html","_self");
 }
+function loadFunuserLogin(){
+    document.querySelector("#email").focus();
+
+}
+function enterLogin(event){
+    if(event.key == "Enter")
+    document.querySelector("#password").focus();
+}
+function enterPassword(event){
+    if(event.key == "Enter")
+    loginFunction();
+}

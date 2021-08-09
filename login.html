@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/login.css">
 </head>
 
-<body>
+<body onload="loadFunuserLogin()">
     
     <nav class="nav" id="nav-bar">
         <ul id="nav-bar-menu">
@@ -37,13 +37,13 @@
         </div>
         <div class="right-login-section">
             <h1 class="login-text">Login</h1>
-            <input type="text" id="email" placeholder=" Enter Email"><br>
-            <input type="password" id="password" placeholder="  Enter Password"><br>
+            <input type="text" id="email" placeholder=" Enter Email" onkeydown="enterLogin(event)"><br>
+            <input type="password" id="password" placeholder="  Enter Password" onkeydown="enterPassword(event)"><br>
             <button onclick="loginFunction();" class="login-button">Login</button>
             <button onclick="register();" class="register-button">Register</button>
         </div>
     </div>
-
+    
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>

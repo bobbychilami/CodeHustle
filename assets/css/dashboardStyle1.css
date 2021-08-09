@@ -396,10 +396,7 @@ footer h6{
     color: white;
     display: flex;
 }
-::-webkit-scrollbar{
-    /* width: 0; */
-    background-color: black;
-}
+
 /* 
 @media (max-width: 1300px) {
 

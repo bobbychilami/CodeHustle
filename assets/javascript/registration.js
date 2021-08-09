@@ -64,3 +64,18 @@ function authenticated(id1,name1,email1,password1){
 function loginFun(){
     window.open("login.html","_self");
 }
+function nameLoadFunction(){
+    document.querySelector("#full-name").focus();
+}
+function enterName(event){
+    if(event.key == "Enter")
+    document.querySelector("#inputEmail").focus();
+}
+function enterEmail(event){
+    if(event.key == "Enter")
+    document.querySelector("#inputPass").focus();
+}
+function enterPassword(event){
+    if(event.key == "Enter")
+    register();
+}
