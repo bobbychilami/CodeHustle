@@ -213,21 +213,28 @@ function checkAnswerChecked(id){
             answer.innerHTML = "";
 
     var options = document.getElementsByName("option");
-    for(var i=0;i<options.length;i++){
-        if(options[i].checked)
-        {
-            keyAnswer.doneFlag = true;
-            keyAnswer.answers[id] = options[i].value;
-        }
+    if(options.length <2){
+        alert("Please enter atleast 2 options");
+        return false;
     }
-    // document.querySelector("#questionNo"+id).style.display = "none";
-    // alert(keyAnswer.answers);
-    if(keyAnswer.doneFlag == true){
-        for(var i=1;i<keyAnswer.answers.length;i++){
-            answer.innerHTML += "<li>"+i+" : "+keyAnswer.answers[i]+"</li>";
+    else{
+        for(var i=0;i<options.length;i++){
+            if(options[i].checked)
+            {
+                keyAnswer.doneFlag = true;
+                keyAnswer.answers[id] = options[i].value;
+            }
         }
+        // document.querySelector("#questionNo"+id).style.display = "none";
+        // alert(keyAnswer.answers);
+        if(keyAnswer.doneFlag == true){
+            for(var i=1;i<keyAnswer.answers.length;i++){
+                answer.innerHTML += "<li>"+i+" : "+keyAnswer.answers[i]+"</li>";
+            }
+        }
+        return keyAnswer.doneFlag;
     }
-    return keyAnswer.doneFlag;
+    
 }
 
 
@@ -257,7 +264,7 @@ function addQuestion(){
             html += "<ul id='options"+index+"'> </ul> ";
             html += "</div> ";
             // html += "<div class='answer-field'> <input type='text' id = 'answer"+index+"' placeholder='Answer (Only type the option)'> </div>";
-            html += "<button class='doneButton' id='doneButton"+index+"' onclick = 'doneQ("+index+");' > Done </button>";
+            html += "<button class='doneButton' id='doneButton"+index+"' onclick = 'doneQ("+index+");' > Done </button><h5>(Ctrl+Enter)</h5>";
             html += "</li>";
             indexNum.index = index;
             data.noOfQue = index;

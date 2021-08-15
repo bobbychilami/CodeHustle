@@ -137,11 +137,12 @@ auth.onAuthStateChanged((firebaseUser)=>
             userData.name = data.val().name;
             userData.email = data.val().email;
             userData.loggedIn = true;
+            logDiv.innerHTML = "<a onclick='logoutFun()'>"+userData.name+"</a>";
             }
           }
 
           );
-          logDiv.innerHTML = "<a onclick='logoutFun()'>Logout</a>";
+          
         }
         else{
           userData.loggedIn = false;

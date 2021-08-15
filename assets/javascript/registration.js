@@ -3,10 +3,11 @@
 const users = firebase.database().ref("users");
 function register(){
 
-
+    
     
 const name1 = document.querySelector("#full-name").value;
-const email1 = document.querySelector("#inputEmail").value;
+if(checkAlphabet(name1)){
+    const email1 = document.querySelector("#inputEmail").value;
 const reemail = email1
 const password1 = document.querySelector("#inputPass").value;
     if(email1.trim()==""){
@@ -29,6 +30,10 @@ const password1 = document.querySelector("#inputPass").value;
           }
           );     
  }
+}
+else{
+    alert("Please enter a valid Name");
+}
     
 }
 
@@ -78,4 +83,11 @@ function enterEmail(event){
 function enterPassword(event){
     if(event.key == "Enter")
     register();
+}
+function checkAlphabet(name){
+    var exp = /^[A-Za-z]+$/;
+    if(name.match(exp))
+    return true;
+    else
+    return false;
 }
